@@ -1,0 +1,105 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+/* ======================= INICIO DEL CÓDIGO AÑADIDO ======================= */
+
+/* Estilo para el botón de mapa activo */
+.active-map-btn {
+    background-color: #3b82f6 !important; /* azul-500 de Tailwind */
+    color: white !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* ======================= FIN DEL CÓDIGO AÑADIDO ======================= */
+
+
+/* Estilo personalizado para el botón de simulación */
+.btn-simulate {
+    background-color: #10b50d;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.btn-simulate:hover {
+    background-color: #8ddc26;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 20px -3px rgb(0 0 0 / 0.15), 0 6px 8px -4px rgb(0 0 0 / 0.1);
+}
+.btn-simulate:active {
+    transform: translateY(1px);
+}
+
+/* Estilo para la animación de pulsación */
+@keyframes pulse-fast {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+.animate-pulse-fast {
+    animation: pulse-fast 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+
+/* ======================= INICIO DEL CÓDIGO AÑADIDO/MODIFICADO ======================= */
+
+/* Contenedor del icono personalizado de Leaflet */
+.custom-div-icon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilo para el icono de alerta SVG */
+.alert-marker-icon {
+    filter: drop-shadow(0 0 8px rgba(255, 0, 0, 0.7));
+    transition: all 0.3s ease;
+}
+.alert-marker-icon:hover {
+    transform: scale(1.2);
+}
+
+/* ======================= FIN DEL CÓDIGO AÑADIDO/MODIFICADO ======================= */
+
+
+/* Spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1); /* Ligeramente más visible */
+    border-top: 4px solid #3b82f6; /* Color azul para consistencia */
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Animación para el logo */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); } /* Ajusta la altura del flotado */
+    100% { transform: translateY(0px); }
+}
+
+.logo-animation {
+    animation: float 3s ease-in-out infinite; /* 3 segundos, suave, infinito */
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.2)); /* Sombra para que flote */
+}
+/* Estilo para el icono dentro del botón de ubicación */
+#locate-me-btn svg {
+    display: block; /* Asegura que el SVG se posicione correctamente */
+    margin: 0 auto; /* Centra el SVG si el botón es más grande */
+}
