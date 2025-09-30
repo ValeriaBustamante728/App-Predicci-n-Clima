@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Alerta Temprana",
+    "slug": "alerta-temprana",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./img/favicon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./img/favicon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#3b82f6"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Esta aplicación necesita acceso a tu ubicación para mostrar alertas en el mapa.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Esta aplicación necesita acceso a tu ubicación para mostrar alertas en el mapa."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./img/favicon.png",
+        "backgroundColor": "#3b82f6"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./img/favicon.png"
+    },
+    "sdkVersion": "54.0.0",
+    "plugins": [
+      "expo-web-browser"
+    ]
+  }
+}
